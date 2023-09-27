@@ -93,7 +93,7 @@ int main() {
         deck[52] = { 0x16, 0x7D, 0xDC, 0xB1, 0x55, 0xB8, 0xD9, 0x29, 0x9B, 0x6C, 0xA1, 0xC7, 0xA2, 0x54, 0x57, 0x32, 0x36, 0x13, 0x44, 0x9D, 0xC7, 0x6A, 0x28, 0x48, 0x3A, 0x8B };
     
     while (aLastCardIndex < 52 && bLastCardIndex < 52) {
-        // All multiples of 17 are represented by two equal nibbles in binary (Ex. 0x11, 0x22 . . . 0xFF) so this can be used to check 
+        // Multiples of 17 up to 255 are represented by two equal nibbles in binary (Ex. 0x11, 0x22 . . . 0xFF) so this can be used to check 
         //      if the current match is a draw.
         if(deck[0] % 17 != 0) {
             // deck[0] >> 4 extracts the high nibble from the byte stored at deck[0], deck[0] & 0x0F extracts the low nibble
