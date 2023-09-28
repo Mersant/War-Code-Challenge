@@ -45,13 +45,13 @@ int main() {
             // "Lay three cards face down" then loop through cards until a player runs out of cards or a non-tie match is find. In binary, multiples
             //      of 17 up to 255 are represented by two equal nibbles in binary (Ex. 0x11, 0x22 . . . 0xFF) so this can be used to check 
             //      if the current match is a draw.
-            while(deck[offset] % 17 == 0) {
+            while(deck[offset] % 17 == 0 && offset < 52) {
                 offset++;
-                if(offset > aLastCardIndex || offset > bLastCardIndex) {
-                    std::cout << "\x1B[31m\x1B[1mThe loser has run out of troops to send!!!\x1B[0m" << std::endl;
-                    break;
-                } 
             }
+            if(offset > aLastCardIndex || offset > bLastCardIndex) {
+                std::cout << "\x1B[31m\x1B[1mThe loser has run out of troops to send!!!\x1B[0m" << std::endl;
+                break;
+            } 
             std::cout << "\x1B[37m\x1B[1mA breakthrough has occurred and the stalemate has ended! Continue with battle!\x1B[0m" << std::endl;
         }
 
