@@ -57,13 +57,13 @@ int main() {
         if(aCard == bCard) {
             (offset == 0) ? offset = 4 : offset++;
             if(offset >= playerBFirstCardIndex || offset > 51 - playerBFirstCardIndex) {
-                std::cout << "\x1B[31m\x1B[1m\x1b[3m\"Send forth more men!\" the desperate general cried, but only a ghostly echo responded from the barren war chamber, for the loser had at last exhausted their final reserves of courageous souls to send to the merciless battlefront.\x1B[0m" << std::endl;
+                std::cout << "\x1B[31m\x1B[1m\x1b[3m\"Send forth more men!\" the desperate general cried in his desolate bunker, but the only response from his radio was static. He had at last exhausted his final reserves of courageous souls to send to the merciless battlefront.\x1B[0m" << std::endl;
                 break;
             }
             continue;
         } else if(aCard > bCard) {
             for(int i = 0; i <= offset; i++) {
-                std::cout << "\x1B[31m\x1B[1mThe desolate landscape awakens as an earth shattering blast is heard. Before they can properly regain their bearings, Player B's forces are reduced to ash.\x1B[0m" << std::endl;
+                std::cout << "\x1B[31m\x1B[1mThe wretched wasteland was jolted awake by a deafening rumble that splintered the firmament. A flash, unlike any other, consumed the battalion's vision rendering them temporarily blind. Player B's forces strained their senses desperately, struggling to reorient themselves amidst the ringing din. But before they could even comprehend their fate, a towering wall of nuclear fire swallowed the horizon as they joined their families in The Ashes. \x1B[0m" << std::endl;
                 moveNibble(deck, 0, playerBFirstCardIndex++);
             }
         } else {
@@ -78,6 +78,6 @@ int main() {
     if(playerBFirstCardIndex == 26) {
         std::cout << "\x1B[35mThe walls of the capital city smoldered as the final artillery barrage ceased, leaving an eerie silence hanging heavily in the air. Blood and ash stained the barren earth that was once fertile farmland, now churned into a graveyard by years of endless carnage. As the last ragged soldiers limped away from the front lines, too exhausted to celebrate or mourn, it was clear the long war had resolved nothing yet destroyed everything.\x1B[0m" << std::endl;
     } else {
-        std::cout << "\x1B[35m" << ((playerBFirstCardIndex > 26) ? "Mushroom clouds bloomed ominously on the horizon as Player A unleashed their remaining arsenal of nuclear warheads, obliterating Player B's cities in flashes of apocalyptic fury after years of relentless warfare. Amid the radioactive ruins, Player A stood victorious, their tattered flag raised over the scorched earth - though any sense of triumph was muted by the unimaginable destruction wrought by both sides' thirst for total war." : "The few ragged survivors of Player B's army stood in silence amidst the smoldering ruins of civilization, having finally defeated Player A after years of apocalyptic war. A blackened wind scattered ashes across the graveyard that was once a thriving world, serving as the only witness to Player B's pyrrhic victory, for no cheer would ever be heard in this tomb of nuclear winter.") << "\x1B[0m" << std::endl;
+        std::cout << "\x1B[35m" << ((playerBFirstCardIndex > 26) ? "Mushroom clouds bloomed ominously across the horizon as Player A unleashed their remaining arsenal of nuclear warheads, obliterating Player B's cities in flashes of apocalyptic fury after years of relentless warfare. Amid the radioactive ruins, Player A stood victorious, their tattered flag raised over the scorched earth - though any sense of triumph was muted by the unimaginable destruction wrought by both sides' thirst for total war." : "The few ragged survivors of Player B's army stood in silence amidst the smoldering ruins of civilization, having finally defeated Player A after years of apocalyptic war. A blackened wind scattered ashes across the graveyard that was once a thriving world, serving as the only witness to Player B's pyrrhic victory, for no cheer would ever be heard in this tomb of nuclear winter.") << "\x1B[0m" << std::endl;
     }
 }
