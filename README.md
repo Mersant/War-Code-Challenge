@@ -17,7 +17,7 @@ Executables were compiled on windows. If you need to compile them yourself, ensu
 
 After you have the proper compiler installed, use it to compile mainNoFlavorText.cpp or mainWithFlavorText.cpp. mainWithFlavorText is far more interesting so you should probably do that one. For GCC, the command to do this would be
 ```
-g++ mainNoFlavorText.cpp -o War
+g++ mainWithFlavorText.cpp -o War
 ```
 Then run it on Mac in Terminal or on Windows in PowerShell by running:
 ```
